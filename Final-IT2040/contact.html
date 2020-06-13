@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" type="text/css" href="GPST.css" />
+    <link rel="icon" type="image/png" href="/images/favicon.png" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact</title>
+  </head>
+
+  <body>
+    <div id="wrapper">
+      <header>
+        <h1>Contact Us</h1>
+      </header>
+      <nav>
+        <a href="index.html">Home</a>
+        &nbsp;
+        <a href="gettingstarted.html">Getting Started</a>
+        &nbsp;
+        <a href="webserver.html">Web Server</a>
+        &nbsp;
+        <a href="minecraft.html">Minecraft Server</a>
+        &nbsp;
+        <a href="docker.html">Docker</a>
+        &nbsp;
+        <a href="contact.html">Contact Us</a>
+      </nav>
+      <main>
+        <div class="row">
+          <div class="column">
+            <h1>Biography</h1>
+            <img id="contact-photo" src="images/me.jpg" alt="Photo of Jordan" />
+            <p>
+              Who am I? Well, my name is Jordan Wentland and I am a Cyber Security
+              student at the University of Cincinnati. This website is intended
+              to serve as my final project for my web development class.
+              Raspberry Pi projects hold a special place in my heart for they
+              are the thing that got me interested in tinkering with smaller
+              computers and projects such as docker. Its given me hours of fun
+              and enjoyment and my goal is to give that right back!
+            </p>
+            <h1>Contact Information</h1>
+            <p>
+              Want to contact me? have an idea for a project? fill out the form
+              below and we will be back in touch soon! If the form doesnt work,
+              you can shoot me an email at
+              <a href="mailto:wentlajc@mail.uc.edu">wentlajc@mail.uc.edu</a>.
+            </p>
+            <form>
+              <label for="FName">*First Name:</label>
+              <input type="text" id="FName" name="FName" required />
+              <label for="LName">*Last Name:</label>
+              <input type="text" id="LName" name="LName" required />
+              <label for="email">*E-mail:</label>
+              <input type="text" id="email" name="email" size="40" required />
+              <label for="phone">Phone:</label>
+              <input type="text" id="phone" name="phone" maxlength="12" />
+              <label for="request">*Project Request:</label>
+              <textarea
+                id="request"
+                name="request"
+                rows="2"
+                cols="30"
+                required
+              ></textarea>
+              <input type="submit" value="submit" />
+            </form>
+          </div>
+        </div>
+      </main>
+      <footer style="text-align: center;">
+        Copyright &copy; 2020, University of Cincinnati, IT 2040.<br />
+        <a href="mailto:wentlajc@mail.uc.edu">wentlajc@mail.uc.edu</a>.
+      </footer>
+    </div>
+  </body>
+</html>

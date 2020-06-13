@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="GPST.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Web Server</title>
+</head>
+
+<body>
+  <div id='wrapper'>
+  <header>
+      <h1>Web Server</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    &nbsp;
+    <a href="gettingstarted.html">Getting Started</a>
+    &nbsp;
+    <a href="webserver.html">Web Server</a>
+    &nbsp;
+    <a href="minecraft.html">Minecraft Server</a>
+    &nbsp;
+    <a href="docker.html">Docker</a>
+    &nbsp;
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <main>
+    <div class = "row"><!--Setting up the Web Server for web applications-->
+      <div class = "column">
+        <h2>How to setup a basic web server on a Raspberry Pi</h2>
+        <p>One major use for a Raspberry pi is the creation of a web server to host web content! By self hosting, you can save money monthly to host your project site/portfolio. Another major perk
+          of self hosting is that you have sole control over what access you have on your server. You can even run multiple websites/applications off one device! In this tutorial, we are going to show
+          you how to create a basic web server using a raspberry pi, based on the steps from our Getting Started tutorial.
+        </p>
+        <p><span class='pop'>How to setup the webserver</span></p>
+        <ol>
+          <li>To start, Start by SSHing into your raspberry pi. This can be done by typing "ssh -l root (your ip address)". Once you hit enter, the raspberry pi will then prompt you for your password.</li>
+          <li>Now that we are connected to the Pi, we are going to want to type "dietpi-software". This will launch us into the installation page for different software packages.</li>
+          <li>Once you are in the software menu, select the "Software Optimised" tab and press enter. You are going to want to scroll down until you find the package called LAMP. Press spacebar on this and then press enter.</li>
+          <li>After this, tab down to the Install button and hit enter. Give it some time while everything downloads. Once everything is downloaded, the raspberry pi will prompt you to restart, go ahead and press ok.</li>
+          <li>Once the Pi restarts reconnect via SSH again. The webserver should now automatically be running in the background!</li>
+          <li>To test and see if the webserver is working, navigate to "http://youriphere" and click enter. If the default Apache2 webpage pops up, you have successfully installed the webserver!</li>
+          <li>To change the file the webserver shows, navigate to /var/www/html by typing "cd /var/www/html" into the pi. By replacing the Index.html file, the content on the webserver will change!</li>
+        </ol>
+      </div>
+      <div class = "column">
+        <p><b>Video Tutorial on how to setup a basic web server</b></p>
+        <iframe width="790" height="550" src="https://www.youtube.com/embed/nKgC5fcpQr4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+      <footer>
+          Copyright &copy; 2020, University of Cincinnati, IT 2040.<br>
+          <a href="mailto:wentlajc@mail.uc.edu">wentlajc@mail.uc.edu</a>.
+        </footer>
+    </div>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="GPST.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Docker Setup</title>
+</head>
+
+<body>
+  <div id='wrapper'>
+  <header>
+      <h1>Docker Setup</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    &nbsp;
+    <a href="gettingstarted.html">Getting Started</a>
+    &nbsp;
+    <a href="webserver.html">Web Server</a>
+    &nbsp;
+    <a href="minecraft.html">Minecraft Server</a>
+    &nbsp;
+    <a href="docker.html">Docker</a>
+    &nbsp;
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <main>
+    <div class = "row"><!--Setting up The minecraft server-->
+      <div class = "column">
+        <h2>What is docker?</h2>
+        <p>Docker is best described as an application which runs other applications. Docker 'containerises" applications such as web servers, databses, and more in to an easy to run and downloadble package.
+            With docker, near instantaneuosly, you can spin up as many LAMP servers or Scale an application as much as one may want. While docker is used heavily in the computing world and in the industry, 
+            docker can also be used for some home use. This tutorial will teach you how to install docker and how to run your first docker image on your machine.
+        </p>
+        <p><span class='pop'>How to setup Docker on the Raspberry Pi</span></p>
+        <ol>
+          <li>To start, Start by SSHing into your raspberry pi. This can be done by typing "ssh -l root (your ip address)". Once you hit enter, the raspberry pi will then prompt you for your password.</li>
+          <li>Now that we are connected to the Pi, we are going to want to type "dietpi-software". This will launch us into the installation page for different software packages.</li>
+          <li>Once you are in the software menu, select the "Software Optimised" tab and press enter. You are going to want to scroll down until you find the package called Docker. Press spacebar on this and then press enter to install it.</li>
+          <li>After this, tab down to the Install button and hit enter. Give it some time while everything downloads. Once everything is downloaded, the raspberry pi will prompt you to restart, go ahead and press ok.</li>
+          <li>Once the Pi restarts reconnect via SSH again. Docker should now be running and enabled on your pi. To test this, type "docker -v" to see what version of docker you are running.</li>
+          <li>Now that we have confirmed that docker is installed we can run our first docker instance. To start, you are going to want to type:<br><br><i style="word-wrap: break-word;">git clone https://github.com/dockersamples/node-bulletin-board</i><br><br>This will clone the sample docker file from dockers Github Repo.</li>
+          <li>Next, type:<br><br><i>cd node-bulletin-board/bulletin-board-app</i><br><br>This will navigate to the files folder we pulled from the docker github.</li>
+          <li>Once in this folder, we need to type: <br><br> <i> docker build --tag bulletinboard:1.0 . </i><br><br>this will build our docker image.</li>
+            <li> Finally, to run our rocker image we must type <br><br><i>docker run --publish 8000:8000 --detach --name bb bulletinboard:1.0</i><br><br> To break this down command down some, "docker run" tells us t we are going to run a docker image,
+            "--publish 8000:8000" says that we are publishin on board 8000 and we open that port on our device, "--detach" tells our application to run in the background, and "--name" names the process running in the background.</li>
+            <li> Now that our docker image is running, we can navigate to it by going to <i>yourip:8000</i> in a web browser of your choice. If all went to plan, then you should see a website for a bulletin board!</li>
+        </ol>
+      </div>
+      <div class = "column">
+        <p><b>Video Tutorial on how to setup Docker</b></p>
+        <iframe width="790" height="550" src="https://www.youtube.com/embed/cQyWBDR3MuQ" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+      <footer>
+          Copyright &copy; 2020, University of Cincinnati, IT 2040.<br>
+          <a href="mailto:wentlajc@mail.uc.edu">wentlajc@mail.uc.edu</a>.
+        </footer>
+    </div>
+</body>
+</html>

@@ -1,0 +1,57 @@
+body {
+    background-color: #ffffff;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+header {
+    background-color: #00B386;
+    color: #ffffff;
+    line-height: 400%;
+    text-indent: 1em;
+    background-image: url('pasture.png');
+    background-position: right;
+    background-repeat: no-repeat;
+}
+footer { 
+    text-align: center;
+    font-size: 75%;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+nav {
+    background-color: #70DBDB;
+    font-weight: bold;
+}
+a:link {
+    text-decoration: none;
+}
+
+h1 {
+    margin-bottom: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+h2 {
+    color: #00664D;
+    font-family: Georgia, 'Times New Roman', serif;
+}
+h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+dt {
+    color: #00664D;
+}
+li {
+    list-style: url(marker.gif);
+}
+
+.barn {
+    color: #70DBDB;
+    font-weight: bold;
+}
+#contact {
+    font-size: 90%;
+}

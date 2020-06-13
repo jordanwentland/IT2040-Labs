@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <link rel="stylesheet" type="text/css" href="GPST.css">
+  <link rel="icon" type="image/png" href="/images/favicon.png" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Getting Started</title>
+</head>
+
+<body>
+  <div id='wrapper'>
+  <header>
+      <h1>Getting Started</h1>
+  </header>
+  <nav>
+    <a href="index.html">Home</a>
+    &nbsp;
+    <a href="gettingstarted.html">Getting Started</a>
+    &nbsp;
+    <a href="webserver.html">Web Server</a>
+    &nbsp;
+    <a href="minecraft.html">Minecraft Server</a>
+    &nbsp;
+    <a href="docker.html">Docker</a>
+    &nbsp;
+    <a href="contact.html">Contact Us</a>
+  </nav>
+  <main>
+    <div class = "row"><!--Reccomendations and material section-->
+      <div class = "column">
+        <h2>What kind of Raspberry Pi is right for you?</h2>
+        <p>When it comes to selecting which raspberry pi is right for you, there are a lot of different factors to consider before deciding. To start, one thing to keep in mind when selecting a raspberry 
+          pi for your next project is size constraints. If you project requires you to be in a small form factor, the Pi Zero(w) may be a good option for you! However, if size isnt an issue, it could be advised
+          to look at one of the larger more powerful Pis such as the 4B or 3B+. Listed below is a very basic core comparison between the 3 different raspberry Pis i can reccomend in 2020. In the following tutorials, I will personally be using a raspberry pi 4B+ (4gb of ram). This little machine will do just about any project
+          you may want, ranging from a basic web server to even a full fledged minecraft server!
+        </p>
+          <table style="width:100%">
+            <tr>
+              <th>Version</th>
+              <th>Price</th>
+              <th>Core Count</th> 
+              <th>Cpu Clock Speed</th>
+            </tr>
+            <tr>
+              <td>Pi Zero(w)</td>
+              <td>10-15$</td>
+              <td>1 core</td>
+              <td>1 Ghz</td>
+            </tr>
+            <tr>
+              <td>Pi 3B+</td>
+              <td>35$</td>
+              <td>4 cores</td>
+              <td>1.4 Ghz</td>
+            </tr>
+            <tr>
+              <td>Pi 4B</td>
+              <td>35-45$</td>
+              <td>4 cores</td>
+              <td>1.5 Ghz</td>
+            </tr>
+          </table>
+          <br>
+      </div>
+      <div class = "column">
+
+      </div>
+    </div>
+    <div class = "row"><!--Setting up DietPi for the first time-->
+      <div class = "column">
+        <h2>How to setup a raspberry pi</h2>
+        <p>When setting up our raspberry pi, we are going to use a very light OS called "DietPi". DietPi is an extremely light weight version of the OS offered by the Raspberyy Pi organization
+          Themselves. DietPi is reccomended for beginner use due to its extensive collection of tools and applications for easy setup and operation.
+        </p>
+        <p><span class='pop'>Required equipment</span></p>
+        <ul>
+          <li>Raspberry Pi</li>
+          <li>8gb Micro SD Card (minimum)</li>
+          <li>Wireless connection</li>
+          <li>Micro SD Card Reader</li>
+          <li>A monitor that can connect to the Pi</li>
+        </ul>
+        <p><span class='pop'>How to install DietPi</span></p>
+        <ol>
+          <li>To start, download the right image of <a href="https://www.dietpi.com/" target="_blank">DietPi</a> for your corresponding device. In this tutorial, select the Raspbery Pi option.</li>
+          <li>After you download the file, unzip the file using 7zip, winrar, or unarchiver(mac). Make sure you store this somewhere you will remember.</li>
+          <li>To actually write this image to the SD card, we need to install software to do this. The reccomended software is called <a href="https://www.balena.io/etcher/" target="_blank">Balena Etcher</a>. Balena Etcher is used for writing OS images to SD cards and USB Drives. In our case, we will use it to write to our SD Card.</li>
+          <li>After installing Etcher, launch the program and locate the DietPi image in the software. Next, select the correct SD card to write the image to, and then hit Flash! This can take some time to finish flashing the card.</li>
+          <li>If you are using Wi-Fi, browse the data on the SD card and open the file titled "Dietpi.txt". In this file, modify the line: <br><br><i style="word-wrap: break-word;">AUTO_SETUP_NET_WIFI_ENABLED=0</i><br><br>change this to: <br><br><i style="word-wrap: break-word;">AUTO_SETUP_NET_WIFI_ENABLED=1</i><br><br></li>
+          <li>To configure the wifi, open the file titled "dietpi-wifi.txt". Find and replace MySSID and MyWiFiKey to your network credentials. Once you do this, save and exit. You can now remove your SD card and put it in to your raspberry pi!</li>
+          <li>Turn on the pi and connect it to your monitor. On first boot, follow the steps on screen and configure the software packages to your liking. Change the SSH client to OpenSSH to ensure the best compatibility with windows SSH protocols.</li>
+          <li>After setting it up, the Pi will restart and will prompt you to log in. After this, it will ask you to change the password to something more secure. Now that we have our pi setup, take note of the IP address of the Pi.After that, it is now time to connect to it!</li>
+        </ol>
+      </div>
+      <div class = "column">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/1_2Q0UwBvEM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+    <div class = "row"><!--Connecting to DietPi for the first time-->
+      <div class = "column">
+        <h2>Connecting to the raspberry pi for the first time</h2>
+        <p>Now that you have your Raspberry pi setup, and the IP of the Pi recorded, we are now going to connect to it via SSH in powershell! Connecting to it via SSH has a few benefits over giving it a dedicated monitor.
+          For starters, your PI can now be placed anywhere in the house with no issues. You also no longer need 2 sets of peripherals to interact with the device. </p>
+        <ol>
+          <li>To start, ensure the Rasperry Pi is on and running. You will only be able to connect to the device when it is on.</li>
+          <li>Launch powershell on your computer. You can use other programs such as Putty, but powershell has been the most consistent and reliable for my testing.</li>
+          <li>To connect to the Pi, type  "ssh -l root ip-of-the-pi". After this, you should be prompted to type in your password. If done correctly, you should now be connected to your raspberry pi via SSH!</li>
+        </ol>
+      </div>
+      <div class = "column">
+        <iframe width="560" height="315" src="https://www.youtube.com/embed/sKGJ2-eDz0k" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+    </div>
+  </main>
+      <footer>
+          Copyright &copy; 2020, University of Cincinnati, IT 2040.<br>
+          <a href="mailto:wentlajc@mail.uc.edu">wentlajc@mail.uc.edu</a>.
+        </footer>
+    </div>
+
+</body>
+</html>

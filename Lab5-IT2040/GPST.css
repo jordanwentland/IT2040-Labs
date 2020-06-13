@@ -1,0 +1,136 @@
+*{
+    box-sizing: border-box;
+}
+body {
+    background-color: #ffffff;
+    color: #666666;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #ffffff;
+}
+
+header {
+    background-color: #00B386;
+    color: #ffffff;
+    text-align: center;
+    height: 175px;
+    padding-top: 30px;
+    padding-left: 3em;
+}
+
+footer { 
+    margin-left: 190px;
+    background-color: #ffffff;
+    text-align: center;
+    font-size: 75%;
+    font-style: italic;
+    font-family: Georgia, 'Times New Roman', serif;
+    padding: 15px;
+}
+
+nav {
+    padding: 1.5em;
+    font-size: 120%;
+    float: left;
+    width: 160px;
+    font-weight: bold;
+}
+
+main {
+    background-color: #ffffff;
+    margin-left: 190px;
+    padding-top: 1px;
+    padding-right: 20px;
+    padding-left: 30px;
+    padding-bottom: 20px;
+    display: block;
+}
+ul a {
+    margin: 0px;
+    padding-left: 0px;
+    font-size: 1.2em;
+    list-style-type: none;
+}
+
+ul a:link {
+    text-decoration: none;
+    color: #00664D;
+}
+
+ul a:visited {
+    text-decoration: none;
+    color: #7A7A52;
+}
+
+ul a:hover {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+    font-family: Georgia, 'Times New Roman', serif;
+    font-size: 3em;
+    letter-spacing: 0.25em;
+}
+
+li{
+    list-style-type: none;
+}
+
+h2 {
+    color: #00664D;
+    font-family: Georgia, 'Times New Roman', serif;
+    text-shadow: 1px 1px #cccccc;
+}
+h3 {
+    font-family: Georgia, 'Times New Roman', serif;
+}
+
+dt {
+    color: #00664D;
+}
+main ul {
+    list-style: url(Assets/marker.gif);
+}
+
+.barn {
+    color: #70DBDB;
+    font-weight: bold;
+}
+#contact {
+    font-size: 90%;
+}
+#wrapper {
+    margin: auto;   
+    width: 80%;
+    background-color: #0c5442;
+    background-image: linear-gradient(#ffffff, #0c5442);
+    border-style: solid;
+    border-width: 1.5pt;
+    border-color: #003300;
+    min-width: 900px;
+    max-width: 2050px;
+    box-shadow: 4px 4px #133926;
+}
+#heroHome {
+    height: 300px;
+    margin-left: 190px;
+    background-image: url(Assets/sunsetHorse.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#heroBoard {
+    height: 300px;
+    margin-left: 190px;
+    background-image: url(Assets/fenceline.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
+#heroTraining {
+    height: 300px;
+    margin-left: 190px;
+    background-image: url(Assets/BayBella.png);
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+}
